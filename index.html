@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="geo-toast" class="geo-toast hidden"></div>
+
+    <div class="app">
+
+        <div id="loading" class="loading hidden">
+            <div>Загрузка...</div>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div class="header">
+            <h2 id="location-title">Текущее местоположение</h2>
+            <div>
+                <button id="refresh-btn" class="btn btn-primary">Обновить</button>
+                <button id="geo-btn" class="btn btn-secondary">📍</button>
+            </div>
+        </div>
+
+        <div id="weather-container" class="weather-container"></div>
+
+        <div class="cities-section">
+            <h3>Выбор города</h3>
+            
+            <div class="cities-list" id="cities-list">
+                <p id="empty-cities-message" style="color: #666; font-style: italic;">
+                    Добавьте города для отображения
+                </p>
+            </div>
+
+            <div class="add-city-form">
+                <input id="city-input" type="text" placeholder="Введите название города" autocomplete="off">
+                <div id="suggestions" class="suggestions hidden"></div>
+                <button id="add-city-btn" class="btn btn-primary">Добавить</button>
+            </div>
+            <div id="city-error" class="error hidden" style="margin-top: 10px;"></div>
+
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
